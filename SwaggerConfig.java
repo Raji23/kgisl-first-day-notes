@@ -1,4 +1,4 @@
-package com.kgisl.angulardemo.angularemp;
+package com.kgisl.sample1.book;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,7 +16,7 @@ public class SwaggerConfig {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
 				.apis(RequestHandlerSelectors.any())
-				.paths(PathSelectors.regex("/employees.*"))
+				.paths(PathSelectors.regex("/*.*"))
 				.build();
 	}
 }
