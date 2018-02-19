@@ -1,6 +1,7 @@
-package com.kgisl.sample1.book;
+package com.example.god4.demos;
 
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,25 +20,25 @@ public class BookController {
     return repo.findAll();
   }
   
-  @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-  public Book findone(@PathVariable Integer id) {
-    return  repo.findOne(id);
+  @RequestMapping(value = "/{bookid}",method = RequestMethod.GET)
+  public Book findone(@PathVariable Integer bookid) {
+    return  repo.findOne(bookid);
   }
   
   @RequestMapping(method = RequestMethod.POST)
   public Book addItem(@RequestBody Book item) {
-    item.setId(null);
+    item.setBookId(null);
     return repo.saveAndFlush(item);
   }
   
-  @RequestMapping(value = "/{id}", method = RequestMethod.POST)
-  public Book updateItem(@RequestBody Book updatedItem, @PathVariable Integer id) {
-    updatedItem.setId(id);
+  @RequestMapping(value = "/{bookid}", method = RequestMethod.POST)
+  public Book updateItem(@RequestBody Book updatedItem, @PathVariable Integer bookid) {
+    updatedItem.setBookId(bookid);
     return repo.saveAndFlush(updatedItem);
   }
   
-  @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-  public void deleteItem(@PathVariable Integer id) {
-    repo.delete(id);
+  @RequestMapping(value = "/{bookid}", method = RequestMethod.DELETE)
+  public void deleteItem(@PathVariable Integer bookid) {
+    repo.delete(bookid);
   }
 }

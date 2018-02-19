@@ -1,4 +1,4 @@
-package com.kgisl.sample1.book;
+package com.example.god4.demos;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -10,27 +10,26 @@ import javax.persistence.Id;
 public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id; 
+	private Integer bookid; 
 	
 	@Column
 	private String bookname; 
 	
 	@Column
-	private String title; 
+	private String author; 
 	
 	@Column
-	private String author; 
+	private String email; 
 	
 	@Column
 	private String price; 
 	
 	
-	
-	public Integer getId() {
-		return id;
+	public Integer getBookId() {
+		return bookid;
 	}
-	public void setId(Integer id) {
-		this.id = id;
+	public void setBookId(Integer bookid) {
+		this.bookid = bookid;
 	}
 	public String getBookname() {
 		return bookname;
@@ -38,22 +37,22 @@ public class Book {
 	public void setBookname(String bookname) {
 		this.bookname = bookname;
 	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
 	public String getAuthor() {
 		return author;
 	}
 	public void setAuthor(String author) {
 		this.author = author;
 	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
 	public String getPrice() {
 		return price;
 	}
-	public void setprice(String price) {
+	public void setPrice(String price) {
 		this.price = price;
 	}
 	

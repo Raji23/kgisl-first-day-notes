@@ -1,5 +1,4 @@
-package com.kgisl.sample1.book;
-
+package com.example.god4.demos;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface BookRepository extends JpaRepository<Book, Integer> {
